@@ -19,6 +19,12 @@
 		color: $black;
 	}
 
+	&Item {
+		img {
+			max-height: 75vh;
+		}
+	}
+
 	&Nav {
 		margin-left: $spacing_base;
 		width: 150px;

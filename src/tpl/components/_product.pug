@@ -2,7 +2,7 @@ include ../../_db/_products.pug
 
 section.ProductSection
 	mixin product-card(product)
-		article(itemscope itemtype="http://schema.org/CreativeWork" data-aos="slide-right" data-aos-offset="400")
+		article.ProductItem(itemscope itemtype="http://schema.org/CreativeWork" data-aos="slide-right" data-aos-offset="400")
 			img(src="assets/images/" + product.image_url)
 			h3.productTitle= product.title
 
