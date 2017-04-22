@@ -10,7 +10,7 @@
 		height: $spacing_base * 2;
 		color: $white;
 		background-color: $gray_light;
-		height: 100vh;
+		min-height: 50vh;
 		@include max-screen($small) {
 			font-size: 0.8em;
 		}
