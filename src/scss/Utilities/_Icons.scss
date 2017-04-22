@@ -3,8 +3,8 @@
 .icon {
 	&Close {
 		height: 26px;
-		stroke: $white;
-		stroke-width: 3px;
+		stroke: $black;
+		stroke-width: 1px;
 		@include max-screen($big) {
 			height: 36px;
 		}

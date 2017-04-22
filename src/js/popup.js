@@ -23,7 +23,7 @@ $aboutBtn.click(function(event) {
 $closeAbout.click(function(event) {
     event.preventDefault();
     $html.removeClass("overflow");
-    $popupDiv.removeClass("active");
+    $popupAbout.removeClass("active");
 });
 
 $close.click(function(event) {

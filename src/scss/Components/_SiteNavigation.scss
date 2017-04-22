@@ -3,8 +3,8 @@
  */
 .siteNavigation {
 	position: fixed;
-	bottom: $spacing_base;
-	left: $spacing_base;
+	bottom: $spacing_base / 2;
+	left: $spacing_base / 2;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -23,22 +23,22 @@
 		padding-left: 0;
 		@include max-screen($big) {
 			display: none;
-			&.overlayMenu { // Overlay menu on mobile devices
-				height: 50vh;
-				width: 70%;
-				display: flex;
-				flex-wrap: wrap;
-				flex-direction: column;
-				justify-content: center;
-				background-color: $brand_color1;
-				position: fixed;
-				right: 0;
-				top: 0;
-				font-size: 200%;
-				a{
-					color: $brand_color2;
-				}
-			}
+			// &.overlayMenu { // Overlay menu on mobile devices
+			// 	height: 50vh;
+			// 	width: 70%;
+			// 	display: flex;
+			// 	flex-wrap: wrap;
+			// 	flex-direction: column;
+			// 	justify-content: center;
+			// 	background-color: $brand_color1;
+			// 	position: fixed;
+			// 	right: 0;
+			// 	top: 0;
+			// 	font-size: 200%;
+			// 	a {
+			// 		color: $brand_color2;
+			// 	}
+			// }
 		}
 		@include min-screen($big) {
 		}

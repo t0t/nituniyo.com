@@ -4,7 +4,7 @@
 .About {
 	display: none;
 	opacity: 0;
-	background-color: rgba($brand_color1,.9);
+	background-color: rgba($white,.8);
 	z-index: 100;
 	position: fixed;
 	left: 0;
@@ -15,6 +15,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: $spacing_base;
+	color: $black;
 
 	&.active {
 		// open popup contact
