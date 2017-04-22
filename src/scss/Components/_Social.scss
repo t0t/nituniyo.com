@@ -1,0 +1,16 @@
+/*
+ * Social
+ */
+
+.Social {
+	position: fixed;
+	bottom: $spacing_base / 2;
+	right: $spacing_base / 2;
+	display: flex;
+	list-style: none;
+	// width: 300px;
+	&Item {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
