@@ -4,9 +4,9 @@ include ../lib/mixins/_svg-icon.pug
 mixin cover-feature(feature)
     .CoverFeatures--item
         h3=feature.title
-            +svg-icon(feature.icon)
+            //- +svg-icon(feature.icon)
 
 section.Cover
-    aside.CoverFeatures
+    aside.CoverFeatures(data-aos="slide-right")
         for feature in features
             +cover-feature(feature)
