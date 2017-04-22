@@ -47,7 +47,7 @@ $image-base-path: '../Images/' !default;
 // All brand colors, for each of these keys, a utility color-class will be generated.
 // f.e. `.u-brandColor-primary { color: #0097d7; }`
 $brand-colors: (
-      primary: #777,
+      primary: $black,
       secondary: red
 )  !default;
 

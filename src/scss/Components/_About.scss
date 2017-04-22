@@ -1,0 +1,67 @@
+/*
+ * About
+ */
+.About {
+	display: none;
+	opacity: 0;
+	background-color: rgba($brand_color1,.9);
+	z-index: 100;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: $spacing_base;
+
+	&.active {
+		// open popup contact
+		display: flex;
+		opacity: 1;
+	}
+
+	&Header {
+		width: 100%;
+		color: $white;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		background-color: $gray_dark;
+		padding-top: $spacing_base / 2;
+		padding-bottom: $spacing_base / 2;
+		@include min-screen($big) {
+			padding-top: $spacing_base;
+			padding-bottom: $spacing_base;
+
+			div {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			h2 {
+				margin-bottom: 0;
+			}
+		}
+
+		h1 {
+			width: 100%;
+			flex: 1 100%;
+		}
+
+		h1,
+		h2 {
+			font-size: inherit;
+		}
+
+		h2 {
+			font-weight: normal;
+			margin-right: $spacing_base / 2;
+		}
+	}
+}

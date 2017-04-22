@@ -23,14 +23,14 @@
 		}
 	}
 
-	&Lupa {
-		fill: none;
-		stroke: $gray_lighter;
-		stroke-width: 1px;
-		width: 27px;
-		height: 27px;
-		margin-right: 10px;
-	}
+	// &Lupa {
+	// 	fill: none;
+	// 	stroke: $gray_lighter;
+	// 	stroke-width: 1px;
+	// 	width: 27px;
+	// 	height: 27px;
+	// 	margin-right: 10px;
+	// }
 
 	&Logo--line {
 		height: 60px;
@@ -50,21 +50,5 @@
 		&--prev {
 			stroke: gray;
 		}
-	}
-
-	&Palet {
-		stroke: $black;
-	}
-
-	&Pefc {
-		fill: none;
-		stroke: $black;
-		stroke-width: 0.5px;
-	}
-
-	&Default {
-		fill: none;
-		stroke: $black;
-		stroke-width: 0.5px;
 	}
 }

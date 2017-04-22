@@ -1,22 +1,20 @@
-input.btn.btn--invert#contactBtn(type="button" value="Contact Button")
-
 .Contact--form
-    a#closeBtn(href="#")
-        svg(class="icon iconClose")
-            use(xlink:href="assets/icons.svg#icon-close")
+	a#closeBtn(href="#")
+		svg(class="icon iconClose")
+			use(xlink:href="assets/icons.svg#icon-close")
 
-    h2 Like what you see?
-    p Maybe you have an interesting project I can help you with.
+	h2 Like what you see?
+	p Maybe you have an interesting project I can help you with.
 
-    form(action="https://formspree.io/sergiofores@gmail.com", method="POST")
-        label(for="Name") Name
-        input(type="text", aria-describedby="name", name="name").form-control#name
-        label(for="Email") Email address
-        input(type="email", name="_replyto", aria-describedby="emailHelp").form-control#email
-        small.form0-text.text-muted We'll never share your email with anyone else
-        label(for="Phone Number") Phone Number
-        input(type="tel", aria-describedby="tel", name="tel").form-control#name
-        label(for="Message") Message
-        textarea(rows="3", aria-describedby="message", name="msg").form-control#name
+	form(action="https://formspree.io/sergiofores@gmail.com", method="POST")
+		label(for="Name") Name
+		input(type="text", aria-describedby="name", name="name").form-control#name
+		label(for="Email") Email address
+		input(type="email", name="_replyto", aria-describedby="emailHelp").form-control#email
+		small.form0-text.text-muted We'll never share your email with anyone else
+		label(for="Phone Number") Phone Number
+		input(type="tel", aria-describedby="tel", name="tel").form-control#name
+		label(for="Message") Message
+		textarea(rows="3", aria-describedby="message", name="msg").form-control#name
 
-        button(type="submit", value="Send").btn.btn--invert Submit
+		button(type="submit", value="Send").btn.btn--invert Submit

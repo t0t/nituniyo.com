@@ -7,18 +7,15 @@ $("document").ready(function() {
 
 
 (function() {
-	
+
 	AOS.init({
 	  duration: 1400
 	});
 
-let x = 200;
-let stringg = `
-	test ${x}
-`;
-console.log(stringg);
-	AOS.init({
-		duration: 1400
-	});
+	let x = 200;
+	let stringg = `
+		test ${x}
+	`;
+	console.log(stringg);
 
 })();

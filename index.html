@@ -18,14 +18,10 @@
             <use xlink:href="assets/icons.svg#icon-logo"></use>
           </svg></a>
       </div>
-            <nav class="siteNavigation" role="navigation">
-              <input class="btn btn--hamenu" type="button" id="hamenu" value="Menu">
-              <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li class="PostsBtn"><a href="./posts.html">Posts</a></li>
-                <li class="ProductsBtn"><a href="./products.html">Products</a></li>
-              </ul>
-            </nav>
+      <nav class="siteNavigation" role="navigation">
+        <input class="btn" id="contactBtn" type="button" value="Contact">
+        <input class="btn" id="aboutBtn" type="button" value="About">
+      </nav>
     </header>
     <main class="main">
       <section class="Cover">
@@ -100,7 +96,6 @@
       <main class="siteFooter--credits">
         <p>&copy; 2017</p><small>nituniyo</small>
         <p>I heart modular design systems + designing in the browser while building interfaces that are usable and accessible to all.</p>
-        <input class="btn btn--invert" id="contactBtn" type="button" value="Contact Button">
         <div class="Contact--form"><a id="closeBtn" href="#">
             <svg class="icon iconClose">
               <use xlink:href="assets/icons.svg#icon-close"></use>
@@ -118,6 +113,13 @@
             <textarea class="form-control" rows="3" aria-describedby="message" name="msg" id="name"></textarea>
             <button class="btn btn--invert" type="submit" value="Send">Submit</button>
           </form>
+        </div>
+        <div class="About"><a id="closeAbout" href="#">
+            <svg class="icon iconClose">
+              <use xlink:href="assets/icons.svg#icon-close"></use>
+            </svg></a>
+          <h2>About NITUNIYO</h2>
+          <p>Maybe you have an interesting project I can help you with.</p>
         </div>
       </main>
       <div class="scrollToTop" onclick="scrolltop();"></div>
