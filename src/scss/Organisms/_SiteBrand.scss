@@ -2,15 +2,16 @@
  * Site Brand
  */
 .siteBrand {
-	height: 100%;
+	margin-top: $spacing_base / 2;
+	// height: 100%;
 	// background-color: $white;
-	width: 180px;
+	// width: 180px;
 	@include max-screen($big) {
-		width: $spacing_base * 2;
+		// width: $spacing_base * 2;
 	}
 	@include max-screen($small) {
-		width: $spacing_base * 1.5;
-		order: 1;
+		// width: $spacing_base * 1.5;
+		// order: 1;
 	}
 
 	&__logo {
