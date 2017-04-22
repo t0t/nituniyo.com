@@ -1,0 +1,29 @@
+/*
+ * Site Brand
+ */
+.siteBrand {
+	height: 100%;
+	// background-color: $white;
+	width: 180px;
+	@include max-screen($big) {
+		width: $spacing_base * 2;
+	}
+	@include max-screen($small) {
+		width: $spacing_base * 1.5;
+		order: 1;
+	}
+
+	&__logo {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		@include max-screen($big) {
+			width: 90px;
+			padding-left: $spacing_base / 2;
+		}
+	}
+
+	h1 {
+		display: none;
+	}
+}

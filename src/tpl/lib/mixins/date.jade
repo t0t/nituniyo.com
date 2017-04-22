@@ -1,0 +1,10 @@
+//- Convert YYYY-MM-DD date into human readable format as time element
+    Usage: +date("2016-09-06")
+
+    date - [string] date in YYYY-MM-DD format
+
+mixin date(input)
+    - var date = new Date(input)
+    - var months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]
+
+    time(datetime=JSON.parse(JSON.stringify(date)))&attributes(attributes)=months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear()

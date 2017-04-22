@@ -1,0 +1,11 @@
+//- YouTube Embed
+    Usage: +youtube("DLzxrzFCyOs", "4x3")
+    CSS: .youtube, .youtube--16x9 (plus other desired ratios)
+
+    id    - [string] ID of YouTube video (from URL)
+    ratio - [string] ratio of video, to apply CSS for responsive embeds 
+            (default: 16x9) 
+
+mixin youtube(id, ratio)
+    .youtube(class="youtube--" + (ratio || "16x9"))&attributes(attributes)
+        iframe(src="https://www.youtube.com/embed/" + id frameborder="0" allowfullscreen)

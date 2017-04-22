@@ -1,0 +1,10 @@
+include ../../_db/_products.pug
+
+section.ProductSection
+	mixin product-card(product)
+		article(itemscope itemtype="http://schema.org/CreativeWork" data-aos="slide-right" data-aos-offset="400")
+			img(src="../assets/images/" + product.image_url)
+			h2.productTitle= product.title
+
+for product in products
+	+product-card(product)

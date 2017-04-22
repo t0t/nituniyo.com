@@ -1,0 +1,8 @@
+//- SVG Icon to be used with SVG sprite
+    Usage: +svg-icon("twitter", 32)
+
+mixin svg-icon(name, clase)
+    - var clase = clase || "iconDefault";
+
+    svg(class="icon  " + clase)
+        use(xlink:href='assets/icons.svg#icon-' + name)

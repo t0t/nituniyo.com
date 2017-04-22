@@ -1,0 +1,20 @@
+//- Blockquote
+    Usage: +blockquote("Mary Poppins", "http://disney.com")
+    CSS: .blockquote, .blockquote-body, .blockquote-footer, .blockquote-source
+
+    source - [string] credit for quote
+    link   - [string] link for credit
+
+mixin blockquote(source, link)
+    blockquote.blockquote&attributes(attributes)
+        p.blockquote-body
+            block
+
+        if source
+            footer.blockquote-footer
+
+                if link
+                    a.blockquote-source(href=link target="_blank")=source
+
+                else
+                    .blockquote-source=source

@@ -1,0 +1,12 @@
+include ../../_db/_departments.pug
+
+mixin contact(department)
+  h2.departmentTitle= department.name
+  div.detail
+    p= department.ref
+    p= department.color
+    p= department.collection
+    p= department.category
+
+for department in departments
+  +contact(department)

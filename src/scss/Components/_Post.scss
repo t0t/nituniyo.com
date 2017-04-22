@@ -1,0 +1,108 @@
+/*
+ * Post
+ */
+
+.Post {
+  margin-top: $spacing_base * 2;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    text-align: center;
+    flex: 1 100%;
+    font-weight: bold;
+  }
+
+  // Prev-Next Post navigation
+  &Nav {
+    padding-top: $spacing_base * 2;
+    padding-bottom: $spacing_base;
+    flex: 1 100%;
+    text-align: center;
+
+    @include max-screen($big) {
+      padding-top: 0;
+    }
+  }
+
+  &Header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $gray_light;
+    padding-top: $spacing_base;
+
+    @include max-screen($small) {
+      padding-top: $spacing_base * 1.5;
+    }
+
+    img {
+      // flex: 1;
+    }
+
+    &__side {
+      text-align: center;
+      max-width: 375px;
+      flex: 1 50%;
+      padding: $spacing_base;
+      color: $white;
+
+      @include max-screen($small) {
+        margin-left: $spacing_base / 2;
+        margin-right: $spacing_base / 2;
+      }
+      @include max-screen($big) {
+        max-width: 550px;
+        padding: 0;
+      }
+      @include min-screen($huge) {
+        max-width: 700px;
+        padding-top: 0;
+        padding-bottom: 10px;
+        // flex: 1
+      }
+    }
+  }
+
+  // Post Content
+  &Content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $gray_lighter;
+    padding-bottom: $spacing_base;
+    padding-top: $spacing_base * 2;
+
+    @include max-screen($big) {
+      padding-top: $spacing_base / 2;
+      padding-left: $spacing_base / 2;
+      padding-right: $spacing_base / 2;
+      padding-bottom: 0;
+    }
+
+    &__title {
+      max-width: 700px;
+      flex: 1 100%;
+      @include max-screen($big) {
+        text-align: center;
+      }
+    }
+
+    figure {
+      margin-top: $spacing_base;
+      margin-bottom: $spacing_base * 2;
+
+      @include max-screen($big) {
+        margin-top: 0;
+        margin-bottom: $spacing_base / 2;
+        // line-height: 1;
+      }
+    }
+    p {
+      max-width: 700px;
+    }
+  }
+}

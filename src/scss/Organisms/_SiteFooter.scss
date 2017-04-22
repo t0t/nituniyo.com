@@ -1,0 +1,27 @@
+/**
+ * Site Footer
+ */
+.siteFooter {
+	&--credits {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+		height: $spacing_base * 2;
+		color: $white;
+		background-color: $gray_light;
+		height: 100vh;
+		@include max-screen($small) {
+			font-size: 0.8em;
+		}
+		@include max-screen($big) {
+			padding-left: $spacing_base / 2;
+			padding-right: $spacing_base / 2;
+		}
+	}
+
+	a,
+	a:visited {
+		color: #888;
+	}
+}

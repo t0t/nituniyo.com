@@ -1,0 +1,14 @@
+.Languages {
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin-right: $spacing_base;
+  font-size: .8em;
+
+  @include max-screen($big) {
+    margin-right: $spacing_base / 2;
+  }
+  @include max-screen($small) {
+    order: 3;
+  }
+}

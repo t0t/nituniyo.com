@@ -1,0 +1,25 @@
+//- Table with head, table rows and table cells
+    Usage: +table(["Column one", "Column two"])
+               +row
+                   +cell Content one
+                   +cell Content two
+    CSS: .table, .table-row, .table-row--head, .table-cell, .table-cell--head
+
+    head  - [array] table headings (should match number of columns)
+
+mixin table(head)
+    table.table&attributes(attributes)
+        if head
+            +row.table-row--head
+                each column in head
+                    th.table-cell.table-cell--head=column
+
+        block
+
+mixin row()
+    tr.table-row&attributes(attributes)
+        block
+
+mixin cell()
+    td.table-cell&attributes(attributes)
+        block

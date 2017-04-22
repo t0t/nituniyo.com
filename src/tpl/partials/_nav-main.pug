@@ -1,0 +1,19 @@
+mixin navmenu(menu_items)
+    nav.siteNavigation(role="navigation")
+        input(type="button", id="hamenu", class="btn btn--hamenu", value="Menu")
+        ul
+            each item in menu_items
+                if item.title == current
+                    li( class=[ '', '', 'active' ])
+                        a( href = item.link )
+                            =item.title
+                else
+                    li( class=[ item.title+'Btn', '' ])
+                        a( href=item.link )
+                            =item.title
+
++navmenu([
+    { 'title': 'Home',  'link': './index.html'},
+    { 'title': 'Posts',  'link': './posts.html'},
+    { 'title': 'Products',  'link': './products.html'}
+])

@@ -1,0 +1,49 @@
+/*
+ * Posts
+ */
+.Posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: $spacing_base;
+    padding-bottom: $spacing_base;
+
+    &__title {
+        text-align: center;
+        flex: 1 100%;
+    }
+
+    &__item {
+      @include min-screen(600px) {
+        flex: 0 47%;
+        // &:first-child {
+        //   margin-right: 10px;
+        // }
+        // &:nth-child(2) {
+        //   margin-right: 0;
+        // }
+      }
+        figure {
+            background-color: $gray_lighter;
+            margin-bottom: $spacing_base / 2;
+            @include min-screen(600px) {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        }
+
+        figcaption {
+            flex: 1 200px;
+            padding-top: $spacing_base / 2;
+            padding-right: $spacing_base / 2;
+            padding-left: $spacing_base / 2;
+
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+//- Input search field
+    Usage: +input("Type something here...")
+
+    placeholder - [string] placeholder to be show if field is empty
+    value       - [string] optional default value of field
+
+mixin input(placeholder, value)
+    input(type="search" results="5" placeholder=placeholder value=value name="s")&attributes(attributes)

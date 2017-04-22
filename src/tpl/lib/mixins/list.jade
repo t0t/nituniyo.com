@@ -1,0 +1,21 @@
+//- List and list items
+    Usage: +list("numbers", 5)
+    CSS: .list, .list--bullets, .list--numbers (plus other desired types, 
+         like .list--lower-roman etc.)
+
+    type  - [string] "bullets", "numbers" or other types to be styled in CSS
+    start - [integer] starting point of list (if 1, list starts at 1 or A)
+    block - only list items (li or +item)
+
+mixin list(type, start)
+    if type
+        ol.list(class='list--' + type style=(start === 0 || start) ? 'counter-reset: li ' + (start - 1) : '')&attributes(attributes)
+            block
+
+    else
+        ul.list.list--bullets&attributes(attributes)
+            block
+
+mixin item
+    li.list-item&attributes(attributes)
+        block

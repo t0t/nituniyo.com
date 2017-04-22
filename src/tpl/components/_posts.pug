@@ -1,0 +1,16 @@
+include ../../_db/_posts
+
+
+section.Posts(data-aos="fade-in", data-aos-offset="100")
+    h2.Posts__title Posts
+    mixin contact(post)
+        article.Posts__item(itemtype="http://schema.org/CreativeWork")
+            figure
+                img.post(src=post.image_url)
+                figcaption
+                    a(href=post.link_url alt="Image Title")
+                        h3= post.name
+                        p= post.description
+
+    for post in posts
+        +contact(post)

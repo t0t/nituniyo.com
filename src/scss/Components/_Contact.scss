@@ -1,0 +1,207 @@
+/*
+ * Contact
+ */
+.Contact {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: $spacing_base * 3;
+    @include min-screen($tiny) {
+        //  margin-top: $spacing_base * 3.5;
+    }
+    @include min-screen(666px) {
+        margin-top: $spacing_base * 2;
+    }
+				&Btn {
+					// position: fixed;
+				}
+				&--form {
+					display: none;
+					opacity: 0;
+					background-color: rgba($brand_color1,.9);
+					z-index: 100;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 100vh;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					padding: $spacing_base;
+					&.active { // open popup contact
+						display: flex;
+						opacity: 1;
+					}
+				}
+
+    &Header {
+        width: 100%;
+        color: $white;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: $gray_dark;
+        padding-top: $spacing_base / 2;
+        padding-bottom: $spacing_base / 2;
+
+        @include min-screen($big) {
+          padding-top: $spacing_base;
+          padding-bottom: $spacing_base;
+            div {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+            }
+            h2 {
+              margin-bottom: 0;
+            }
+        }
+
+        h1 {
+            width: 100%;
+            flex: 1 100%;
+        }
+
+        h1,
+        h2 {
+            font-size: inherit;
+        }
+
+        h2 {
+            font-weight: normal;
+            margin-right: $spacing_base / 2;
+        }
+    }
+
+    &Mapa {
+        order: 2;
+        @include min-screen($big) {
+            width: 50%;
+            flex: 1 50%;
+        }
+
+        figcaption {
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            @include min-screen($big) {
+              padding-top: $spacing_base / 1.5;
+              width: 200px;
+              margin-left: 30%;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &Localizacion {
+        position: relative;
+        flex: 1 50%;
+        height: 200px;
+        background-image: url('../assets/images/localizacion.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        // background-attachment: fixed; // Bug in IOs
+
+        @include min-screen($small) {
+          background-size: cover;
+        }
+
+        @include min-screen($big) {
+            height: 460px;
+            order: 1;
+            width: 50%;
+            flex: 0 50%;
+        }
+
+        h3 {
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgba($gray_lighter,.75);
+            line-height: $spacing_base * 1.5;
+            z-index: 1;
+            @include min-screen($big) {
+                position: absolute;
+                width: 220px;
+                left: 78%;
+                top: 0;
+                margin-bottom: 0;
+                border-bottom-right-radius: 30px;
+                border-bottom-left-radius: 30px;
+                border-top-radius: 0;
+                line-height: 75px;
+                background-color: $gray_lighter;
+            }
+        }
+    }
+
+    &Downloads {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        order: 4;
+        flex: 1 50%;
+        padding-top: $spacing_base - 3;
+        padding-bottom: $spacing_base;
+
+        h3 {
+            text-align: center;
+            padding-bottom: 10px;
+            flex: 1 100%;
+        }
+    }
+
+    &Departments {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding-left: 0;
+        order: 3;
+        padding: $spacing_base / 2;
+        margin-bottom: 0;
+        background-color: $gray_lighter;
+
+        &Item {
+            width: 100%;
+            min-height: $spacing_base * 3;
+            // padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            border-bottom: 1px solid rgba($gray_dark,.15);
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            p {
+              margin-bottom: 0;
+            }
+
+            h4 {
+              flex: 1 100%;
+            }
+
+            @include min-screen($big) {
+              flex: 1 50%;
+              padding: $spacing_base;
+            }
+        }
+    }
+}

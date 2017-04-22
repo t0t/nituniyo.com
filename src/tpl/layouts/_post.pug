@@ -1,0 +1,17 @@
+extends ../_layout
+include ../../_db/_posts
+
+block main
+    section.Posts
+        mixin list_posts(item)
+            h2.Posts__title= post.name
+            article.Posts__item(itemtype="http://schema.org/CreativeWork")
+                figure
+                    img.post(src=post.image_url)
+                    figcaption
+                        a(href=link_url alt="Image Title")
+                            h3= post.name
+                            p= post.description
+
+        for item in posts
+            +list_posts(item)

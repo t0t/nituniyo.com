@@ -1,0 +1,30 @@
+/*
+ * Video
+ */
+
+.Video {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: $gray_lighter;
+  height: 500px;
+  background-image: url('../assets/images/logo-line.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-attachment: fixed;
+
+  &__title {
+    text-align: center;
+    flex: 1 100%;
+    margin-bottom: 0;
+  }
+  iframe {
+    margin-bottom: 0;
+  }
+
+  & p {
+    display: none;
+  }
+}

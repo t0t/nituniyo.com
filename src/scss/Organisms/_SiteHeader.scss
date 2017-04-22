@@ -1,0 +1,19 @@
+/*
+ * Site Header
+ */
+.siteHeader {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: $spacing_base * 2;
+	text-align: center;
+	color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 100;
+	@include max-screen($small) {
+		height: $spacing_base * 1.5;
+		flex-wrap: wrap;
+	}
+}

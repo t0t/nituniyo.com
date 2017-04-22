@@ -1,0 +1,66 @@
+/*
+ * Site Navigation
+ */
+.siteNavigation {
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	.active {
+		border-bottom: 5px solid $brand_color1;
+	}
+	@include max-screen($small) {
+		order: 2;
+	}
+
+	ul {
+		display: flex;
+		list-style: none;
+		margin-bottom: 0;
+		padding-left: 0;
+		@include max-screen($big) {
+			display: none;
+			&.overlayMenu { // Overlay menu on mobile devices
+				height: 50vh;
+				width: 70%;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				justify-content: center;
+				background-color: $brand_color1;
+				position: fixed;
+				right: 0;
+				top: 0;
+				font-size: 200%;
+				a{
+					color: $brand_color2;
+				}
+			}
+		}
+		@include min-screen($big) {
+		}
+	}
+
+	li {
+		// display: inline-flex;
+	}
+
+	a {
+		color: $black;
+		padding: $spacing_base / 4;
+		height: 100%;
+		// text-transform: uppercase;
+		border-bottom: 5px solid transparent;
+
+		&.active,
+		&:active,
+		&:focus,
+		&:hover {
+			border-bottom-color: $gray_dark;
+		}
+		@include max-screen($small) {
+			color: $black;
+		}
+	}
+}

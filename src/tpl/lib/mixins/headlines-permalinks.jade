@@ -1,0 +1,54 @@
+//- Headlines with permalinks
+    Usage: +h(2, "headline-id")
+    CSS: .u-heading-1, .u-heading-2, .u-heading-3, .u-heading-4, .u-heading-5, .u-heading-6, .u-permalink
+
+    level - [integer] headline level (1-6)
+    id    - [string] link for credit
+
+//- Headlines helper
+    at the moment, there seems to be no other way to dynamically render element names in Jade
+
+mixin headline(level)
+    if level == 1
+        h1.u-heading-1
+            block
+
+    else if level == 2
+        h2.u-heading-2
+            block
+
+    else if level == 3
+        h3.u-heading-3
+            block
+
+    else if level == 4
+        h4.u-heading-4
+            block
+
+    else if level == 5
+        h5.u-heading-5
+            block
+
+    else
+        h6.u-heading-6
+            block
+
+
+//- Permalink helper
+    renders headline text as permalink if id is specified, otherwise only returns headline text
+
+mixin permalink(id)
+    if id
+        a.u-permalink(id=id href="##{id}")
+            block
+
+    else
+        block
+
+
+//- Headline mixin to be used in templates
+
+mixin h(level, id)
+    +headline(level)
+        +permalink(id)
+            block

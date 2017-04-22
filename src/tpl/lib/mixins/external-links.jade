@@ -1,0 +1,11 @@
+//- External links
+    links are opened in a new window while preventing it from accessing the referrer's window object. More info on this vulnerability here: https://mathiasbynens.github.io/rel-noopener/
+
+    Usage: +a("http://example.com") or +a("http://trusted.com", true)
+
+    url     - [string] link reference
+    trusted - [boolean] link reference is trusted (default: false)
+
+mixin a(url, trusted)
+    a(href=url target="_blank" rel=(!trusted) ? "noopener nofollow" : "")&attributes(attributes)
+        block

@@ -1,0 +1,16 @@
+//- Image
+    Usage: +image("picture.jpg", "This is a caption")
+    CSS: .image-container, .image, .image-caption
+
+    filename - [string] full file name of image
+    caption  - [string] text for image caption
+    path     - [string] path to image folder
+
+mixin image(filename, caption)
+    - var path = "/img/"
+
+    figure.image-container&attributes(attributes)
+        img.image(src=path + filename)
+
+        if caption
+            figcaption.image-caption!=caption

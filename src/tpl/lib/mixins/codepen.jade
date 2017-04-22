@@ -1,0 +1,14 @@
+//- CodePen Embed
+    Usage: +codepen("NxzWpE", "inesmontani", "css", "23801", 500)
+    CSS: .codepen-container, .codepen
+
+    slug        - [string] ID of pen (from URL)
+    user        - [string] CodePen username
+    default_tab - [string] tab to be shown on load (default: "result")
+    theme       - [string] ID of embed theme to use
+    height      - [integer] height of embed in px
+
+mixin codepen(slug, user, default_tab, theme, height)
+    .codepen-container&attributes(attributes)
+        .codepen(data-height=height data-theme-id=theme data-slug-hash=slug data-default-tab=(default_tab || "result") data-embed-version="2" data-user=user)
+            a(href="https://codepen.io/" + user + "/" + slug + "/" target="_blank") View on CodePen

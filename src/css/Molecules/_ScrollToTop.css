@@ -1,0 +1,7 @@
+/**
+ * Scroll to Top button
+ * Displays Scroll to top button
+ */
+.scrollToTop {
+  position: absolute;
+  background-color: red; }
