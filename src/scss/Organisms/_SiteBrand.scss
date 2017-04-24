@@ -3,9 +3,11 @@
  */
 .siteBrand {
 	margin-top: $spacing_base / 2;
-	// height: 100%;
-	// background-color: $white;
-	// width: 180px;
+	margin-left: $spacing_base / 2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
 	@include max-screen($big) {
 		// width: $spacing_base * 2;
 	}
@@ -15,16 +17,17 @@
 	}
 
 	&__logo {
-		height: 100%;
-		display: flex;
-		align-items: center;
+		height: 60px;
+		// display: flex;
+		// align-items: center;
 		@include max-screen($big) {
-			width: 90px;
-			padding-left: $spacing_base / 2;
+			// width: 90px;
+			// padding-left: $spacing_base / 2;
 		}
 	}
 
-	h1 {
-		display: none;
+	&__title {
+		line-height: 1;
+		margin-bottom: 0;
 	}
 }

@@ -15,7 +15,7 @@
 	}
 
 	&Logo {
-		// width: 190px;
+		width: 60px;
 		height: 60px;
 		fill: rgba($brand_color2,.5);
 		@include max-screen($big) {

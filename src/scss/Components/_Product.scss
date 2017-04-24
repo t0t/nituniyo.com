@@ -20,6 +20,8 @@
 	}
 
 	&Item {
+		text-align: center;
+		padding: $spacing_base;
 		img {
 			max-height: 75vh;
 		}
@@ -68,8 +70,8 @@
 	}
 	// Item Product Detail
 	&Detail {
-		margin-top: $spacing_base / 2;
-		background-color: $gray_lighter;
+		display: flex;
+		justify-content: space-around;
 		padding: $spacing_base / 2;
 		text-align: center;
 		color: $gray_light;
