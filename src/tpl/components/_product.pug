@@ -1,12 +1,12 @@
 include ../../_db/_products.pug
 
 section.ProductSection
-	mixin product-card(product)
+	mixin product-card(p)
 		article.ProductItem(itemscope itemtype="http://schema.org/CreativeWork" data-aos="slide-right" data-aos-offset="400")
-			img(src="assets/images/" + product.image_url)
-			h3.productTitle= product.title
+			img(src="assets/images/" + p.image_url)
+			h3.productTitle= p.title
 			a.snipcart-checkout(href="#") Click here to checkout
-			button.btn.snipcart-add-item(data-item-id="2" data-item-name="Bacon" data-item-price="3.00" data-item-weight="20" data-item-url="http://myapp.com/products/bacon" data-item-description="Some fresh bacon") Buy
+			button.btn.snipcart-add-item(data-item-id=p.data_item_id data-item-name=p.data_item_name data-item-price=p.data_item_price data-item-weight=p.data_item_weight data-item-url=p.data_item_url data-item-description=p.data_item_description) Buy
 
-	for product in products
-		+product-card(product)
+	for p in products
+		+product-card(p)
