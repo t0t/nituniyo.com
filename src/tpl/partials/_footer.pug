@@ -1,21 +1,21 @@
 footer.siteFooter
-    block footer
-        aside.Social
-            li.SocialItem
-                a(href="#")
-                    svg(class="icon  iconSocial")
-                        use(xlink:href="assets/icons.svg#icon-instagram")
-            li.SocialItem
-                a(href="#")
-                    svg(class="icon  iconSocial")
-                        use(xlink:href="assets/icons.svg#icon-pinterest")
+	block footer
+		aside.Social
+			li.SocialItem
+				a(href="#")
+					svg(class="icon  iconSocial")
+						use(xlink:href="assets/icons.svg#icon-instagram")
+			li.SocialItem
+				a(href="#")
+					svg(class="icon  iconSocial")
+						use(xlink:href="assets/icons.svg#icon-pinterest")
 
-        //- main.siteFooter--credits
-        //-     p &copy; #{new Date().getFullYear()}
-        //-     small #{PageTitle}
-        //-     p #{AuthorBrief}
+		//- main.siteFooter--credits
+		//-     p &copy; #{new Date().getFullYear()}
+		//-     small #{PageTitle}
+		//-     p #{AuthorBrief}
 
-        include ../components/_contact
-        include ../components/_about
+		include ../components/_contact
+		include ../components/_about
 
-        div(class="scrollToTop" onclick="scrolltop();")
+		div(class="scrollToTop" onclick="scrolltop();")
