@@ -7,6 +7,7 @@ html(lang=es)
 	head
 		title=PageTitle
 		link( rel="stylesheet", href="bower_components/aos/dist/aos.css", type="text/css")
+		link( rel="stylesheet", href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css", type="text/css")
 		link( rel="stylesheet", href="css/Main.css", type="text/css")
 		block metatags
 			meta(charset='utf-8')
@@ -28,6 +29,7 @@ html(lang=es)
 			include ./partials/_footer
 
 		block scripts
+			script(src='https://cdn.snipcart.com/scripts/2.0/snipcart.js' id="snipcart" data-api-key="YjE5ODJiMDctY2FiMy00NTY2LWI2NzEtYTFlZTViMjBjZGI2NjM2MDk4MDMyMzY5MDgxOTI2")
 			script(src='https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js')
 			script(src="https://code.jquery.com/jquery-3.2.1.js"
 integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
