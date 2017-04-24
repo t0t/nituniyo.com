@@ -5,8 +5,8 @@ section.ProductSection
 		article.ProductItem(itemscope itemtype="http://schema.org/CreativeWork" data-aos="slide-right" data-aos-offset="400")
 			img(src="assets/images/" + p.image_url)
 			h3.productTitle= p.title
-			a.snipcart-checkout(href="#") Click here to checkout
-			button.btn.snipcart-add-item(data-item-id=p.data_item_id data-item-name=p.data_item_name data-item-price=p.data_item_price data-item-weight=p.data_item_weight data-item-url=p.data_item_url data-item-description=p.data_item_description) Buy
+			button.btn.snipcart-add-item(data-item-id=p.data_item_id data-item-name=p.data_item_name data-item-price=p.data_item_price data-item-weight=p.data_item_weight data-item-url=p.data_item_url data-item-description=p.data_item_description)
+				| Add to cart
 
 	for p in products
 		+product-card(p)
